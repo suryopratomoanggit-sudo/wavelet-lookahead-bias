@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+PyWavelets
+scikit-learn
+scipy
+tensorflow
+yfinance
+jupyter
