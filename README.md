@@ -22,7 +22,7 @@ Next-day return direction is forecast under an expanding-window walk-forward pro
 | --- | --- |
 | `Code_analysis_notebook.ipynb` | Python notebook (Google Colab) that downloads the data, screens the sample, applies wavelet denoising and runs all experiments, tests and robustness checks |
 | `Raw_data_daily_prices.zip` | Raw daily prices from Yahoo Finance for all 47 candidate stocks, one CSV per stock |
-| `Result_files.zip` | Result files (CSV) produced by the notebook (see *Output files* below) |
+| `Result_files.zip` | Result files (CSV, in English) produced by the notebook, with a codebook (see *Output files* below) |
 | `requirements.txt` | Python dependencies |
 | `README.md` | This file |
 | `LICENSE` | License for the code |
@@ -100,16 +100,19 @@ jupyter notebook Code_analysis_notebook.ipynb
 
 Run the cells in order. Sections 4–6 and 8 read the case-stock CSV files written in section 1; section 7 writes and reads files in `data_lq45/`.
 
-**Output files**
+**Output files** (in `Result_files.zip`, in English; see `CODEBOOK.md` inside the zip for every column)
 
-| File | Content |
-| --- | --- |
-| `wf_akurasi.csv`, `wf_uji.csv` | Walk-forward accuracy per scheme and paired tests, case stocks |
-| `statistik_lengkap.csv` | Exact test statistics and p-values, case stocks |
-| `uji_ketahanan.csv` | Robustness results, 32 configuration–stock combinations |
-| `seleksi_sampel.csv` | Screening results for all 47 candidates (Table S1) |
-| `hasil_lq45.csv` | Per-stock results for the 41-stock sample (Table S2) |
-| `hasil_lstm.csv` | LSTM results, case stocks (Table 4) |
+| File | Notebook writes it as | Content |
+| --- | --- | --- |
+| `walkforward_accuracy.csv`, `walkforward_tests.csv` | `wf_akurasi.csv`, `wf_uji.csv` | Walk-forward accuracy per scheme and paired tests, case stocks |
+| `exact_test_statistics.csv` | `statistik_lengkap.csv` | Exact test statistics and p-values, case stocks |
+| `robustness_results.csv` | `uji_ketahanan.csv` | Robustness results, 32 configuration–stock combinations |
+| `sample_screening.csv` | `seleksi_sampel.csv` | Screening results for all 47 candidates (Table S1) |
+| `lq45_results.csv` | `hasil_lq45.csv` | Per-stock results for the 41-stock sample (Table S2) |
+| `lstm_results.csv` | `hasil_lstm.csv` | LSTM results, case stocks (Table 4) |
+| `CODEBOOK.md` | – | English description of every file, column and label |
+
+The notebook saves its outputs with Indonesian file names and labels. The files in `Result_files.zip` are the same results with file names, column names and labels translated into English; no numbers were changed.
 
 ## Requirements
 
